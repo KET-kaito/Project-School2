@@ -1,0 +1,83 @@
+/* --- CSS เสริมเฉพาะสำหรับภาพจำลองสระน้ำในด่านนี้ --- */
+
+/* ให้สระน้ำเต็มพื้นที่กล่อง preview-container */
+#pond {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    background: #3a5269;
+    border-radius: 10px;
+    /* ปรับขอบให้เข้ากับตีม */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: background 0.8s ease;
+}
+
+/* โหมดกลางคืน */
+#pond.night {
+    background: #0b131b;
+}
+
+/* ดวงจันทร์ */
+.moon {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+#pond.night .moon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* น้องกบ */
+.frog {
+    font-size: 5rem;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+/* ปุ่มจำลองในสระน้ำ */
+#toggleBtn {
+    background: #ffb300;
+    color: #333;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-family: 'Kanit', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+    z-index: 10;
+}
+
+#toggleBtn:active {
+    transform: scale(0.95);
+}
+
+/* ปรับแต่งสีในช่อง Code Editor เล็กน้อยให้ดูเป็น JS */
+.keyword {
+    color: #569cd6;
+    font-weight: bold;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.comment {
+    color: #6a9955;
+    font-style: italic;
+}

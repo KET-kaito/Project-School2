@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด JS - ด่านที่ 15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/css (js โจทย์)/lavel3.css">
+
+</head>
+
+<body>
+    <header>พื้นฐาน JavaScript: การสลับคลาสด้วย ClassList.toggle()</header>
+    <main class="main-container">
+
+        <div class="preview-container">
+            <!-- กล่องที่จะเปลี่ยนสีเมื่อกดปุ่ม -->
+            <div class="screen-box" id="pond">
+                <h3 id="status-text">โหมดปกติ</h3>
+            </div>
+            <!-- ปุ่มสลับโหมด -->
+            <button id="toggleBtn" class="toggle-btn">สลับ กลางวัน/กลางคืน</button>
+        </div>
+
+        <div class="bottom-section">
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>จงเขียนคำสั่งสลับโหมด โดยเพิ่ม/ลบคลาส <strong style="color: #ffeb3b;">"night"</strong>
+                    ให้กับตัวแปร <code>pond</code> ผ่านคำสั่ง <span class="code-highlight">classList.toggle()</span>
+                </h2>
+                <div class="line"></div>
+                <ul class="list-items">
+                    <li><code>toggle</code> จะทำหน้าที่ 2 อย่าง: ถ้าไม่มีคลาสจะ "เพิ่ม" แต่ถ้ามีอยู่แล้วจะ "ลบออก"</li>
+                    <li>รูปแบบ: <code>ตัวแปร.classList.toggle("ชื่อคลาส");</code></li>
+                    <li><strong style="color: #ffeb3b;">เป้าหมาย:</strong>
+                        พิมพ์โค้ดเสร็จแล้วให้ลองกดปุ่มเพื่อดูผลลัพธ์บนจอ!</li>
+                </ul>
+            </div>
+
+            <div class="editor-box">
+                <div class="editor-inner">
+                    <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+                    <div class="code-content">
+                        <div><span class="code-keyword">const</span> <span class="code-var">pond</span> =
+                            document.getElementById(<span class="code-string">"pond"</span>);</div>
+                        <div style="color: #5c6370; font-style: italic;">// สลับคลาส "night" ให้กับตัวแปร pond
+                        </div>
+
+                        <div style="margin-top: 5px;">
+                            <input type="text" id="editor" class="input-box" placeholder="พิมพ์โค้ดที่นี่..."
+                                autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <div class="action-left" style="position: relative;">
+                <button class="btn" id="menuBtn" onclick="toggleMenu()">JS ด่านที่ 3 ▴</button>
+                <div class="level-popup" id="level-menu">
+
+                    <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn current">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="btn disabled" id="nextBtn">ถัดไป</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="/javascript/js (js)/lavel-3.js"></script>
+</body>
+
+</html>

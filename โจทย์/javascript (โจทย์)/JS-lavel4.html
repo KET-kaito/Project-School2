@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด JS - ด่านที่ 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/css (js โจทย์)/lavel4.css">
+
+</head>
+
+<body>
+    <header>การเรียนรู้ JavaScript พื้นฐาน</header>
+
+    <main class="main-container">
+        <!-- Preview เปลี่ยนเป็นพื้นหลังเทาเข้มแบบด่าน 14 -->
+        <div class="preview-container">
+            <div class="form-wrapper">
+                <div class="form-title">ระบบตรวจสอบ</div>
+
+                <div class="form-label">ชื่อเรื่อง: คำร้องขอลาหยุด</div>
+
+                <div class="form-label" style="margin-top: 15px;">สถานะปัจจุบัน:</div>
+                <!-- กล่องสถานะที่เราจะใช้ JS เปลี่ยนข้อความข้างใน -->
+                <div id="status-box" class="form-input-static">รอการตรวจสอบ...</div>
+
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>จงเปลี่ยนข้อความสถานะให้เป็นคำว่า <strong>"อนุมัติ"</strong> โดยใช้คำสั่ง <span
+                        class="code-highlight">innerText</span></h2>
+                <div class="line"></div>
+                <ul class="list-items">
+                    <li>เราได้ดึงกล่องสถานะมาเก็บไว้ในตัวแปร <code>box</code> ให้แล้ว</li>
+                    <li>ใช้คำสั่ง <code>box.innerText = "ข้อความใหม่";</code> เพื่อเปลี่ยนข้อความบนหน้าเว็บ</li>
+                    <li><em>หมายเหตุ: ใน JS อย่าลืมใส่เครื่องหมายคำพูดครอบข้อความด้วยนะ</em></li>
+                </ul>
+            </div>
+
+            <div class="editor-box">
+                <div class="editor-inner">
+                    <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+                    <div class="code-content">
+                        <!-- เปลี่ยนสี Syntax ให้เข้ากับ Dark Theme -->
+                        <div><span class="code-keyword">const</span> <span class="code-var">box</span> = document.getElementById(<span class="code-string">"status-box"</span>);</div>
+                        
+                        <div class="indent" style="color: #5c6370; font-style: italic; margin-top: 5px;">// พิมพ์โค้ดเปลี่ยนข้อความด้านล่างนี้</div>
+                        
+                        <div class="indent" style="margin-top: 5px;">
+                            <!-- ช่องรับคำสั่ง JS (สีพื้นหลังและสีตัวอักษรแบบด่าน 14) -->
+                            <input type="text" id="js-input" class="input-box" placeholder="box..." autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-bar">
+             <div class="action-left" style="position: relative;">
+                <button class="btn" id="menuBtn" onclick="toggleMenu()">JS ด่านที่ 3 ▴</button>
+                <div class="level-popup" id="level-menu">
+                    
+                    <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn current">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="btn disabled" id="next-btn">ถัดไป</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ใส่ Script ของคุณไว้ตรงนี้เหมือนเดิม -->
+    <script src="/javascript/js (js)/lavel-4.js"></script>
+    
+</body>
+
+</html>

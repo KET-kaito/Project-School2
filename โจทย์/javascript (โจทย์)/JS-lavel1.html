@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด JS - ด่านที่ 14</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/css (js โจทย์)/lavel1.css">
+
+</head>
+
+<body>
+    <header>พื้นฐาน JavaScript: การซ่อน/แสดงด้วย ClassList</header>
+    <main class="main-container">
+
+        <div class="preview-container">
+            <div class="js-card" id="popup">
+                <div class="badge">id="popup"</div>
+                <h3>⚠️ โฆษณากวนใจ</h3>
+                <p>ฉันบดบังหน้าจอของคุณอยู่!</p> <br>
+                <img src="/440259267_867711318703915_8169619771112494901_n.jpg" alt="" style="width:300px; height:200px; object-fit: cover; ">
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>จงซ่อนหน้าต่างโฆษณานี้ โดยการเพิ่มคลาสชื่อ <strong style="color: #ffeb3b;">"hidden"</strong>
+                    ผ่านคำสั่ง <span class="code-highlight">classList.add()</span></h2>
+                <div class="line"></div>
+                <ul class="list-items">
+                    <li>ใช้สำหรับเปิด/ปิดเมนู หรือซ่อน/แสดงหน้าต่างบนเว็บ</li>
+                    <li>รูปแบบ: <code>ตัวแปร.classList.add("ชื่อคลาส");</code></li>
+                </ul>
+            </div>
+
+            <div class="editor-box">
+                <div class="editor-inner">
+                    <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+                    <div class="code-content">
+                        <div><span class="code-keyword">const</span> <span class="code-var">modal</span> =
+                            document.getElementById(<span class="code-string">"popup"</span>);</div>
+                        <div style="color: #5c6370; font-style: italic;"> 
+                        </div>
+
+                        <div style="margin-top: 5px;">
+                            <input type="text" id="js-input" class="input-box" autocomplete="off"
+                                spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <div class="action-left" style="position: relative;">
+                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">JS ด่านที่ 1 ▴</button>
+                <div class="level-popup" id="level-popup">
+
+                    <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn current">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="btn disabled" id="next-btn">ถัดไป</a>
+            </div>
+        </div>
+
+        <script src="/javascript/js (js)/lavel-1.js"></script>
+
+    </main>
+
+</body>
+
+</html>

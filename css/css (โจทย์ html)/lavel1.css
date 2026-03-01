@@ -1,0 +1,412 @@
+:root {
+    --bg-dark-green: #0a400a;
+    --bg-panel-green: #3ea924;
+    --bg-dark2-green: #42ac18;
+    --white: #ffffff;
+    --text-dark: #333333;
+
+    /* สีสำหรับ Form Preview */
+    --form-bg-blue: #23518c;
+    --form-bg-yellow: #dbab16;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark-green);
+    color: var(--white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- แถบด้านบนสุด ---------- */
+header {
+    background-color: var(--bg-panel-green);
+    text-align: center;
+    padding: 12px 0;
+    font-size: 32px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- พื้นที่ส่วนกลางทั้งหมด ---------- */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1750px;
+    margin: 0 auto;
+    padding: 25px 0;
+    gap: 20px;
+}
+
+/* ---------- หน้าต่างจำลองผลลัพธ์ HTML (Preview Area) ---------- */
+.preview-container {
+    flex: 1;
+    background-color: var(--form-bg-blue);
+    border: 12px solid var(--white);
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* แถบสีเหลืองตรงกลาง */
+.form-wrapper {
+    background-color: var(--form-bg-yellow);
+    width: 65%;
+    height: 100%;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* ช่อง input คงที่ (จำลอง) */
+.form-input-static {
+    width: 100%;
+    height: 45px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* ปุ่มกดคงที่ (จำลอง) */
+.static-btn {
+    background-color: var(--form-bg-blue);
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Kanit', sans-serif;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* พื้นที่สำหรับ Render โค้ดที่ผู้ใช้พิมพ์ */
+#user-render-area {
+    min-height: 45px;
+    margin-bottom: 25px;
+}
+
+/* CSS บังคับให้ช่องกรอกข้อความที่ผู้ใช้สร้างหน้าตาเข้ากับฟอร์ม */
+#user-render-area input[type="text"] {
+    width: 100%;
+    height: 45px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    color: var(--text-dark);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#user-render-area input[type="text"]:focus {
+    outline: 2px solid var(--form-bg-blue);
+}
+
+
+/* ---------- พื้นที่เนื้อหาด้านล่าง ---------- */
+.bottom-section {
+    display: flex;
+    gap: 25px;
+    height: 340px;
+}
+
+.instruction-box {
+    flex: 1.15;
+    background-color: var(--bg-panel-green);
+    border-radius: 25px;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.instruction-box h1 {
+    font-size: 35px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.instruction-box h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 7px;
+    line-height: 1.5;
+}
+
+.code-highlight {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.line {
+    width: 97%;
+    height: 3px;
+    background: rgb(243, 243, 243);
+}
+
+.list-items {
+    list-style-type: none;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #e8f5e9;
+}
+
+.list-items li {
+    margin-bottom: 5px;
+}
+
+.list-items code {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: var(--white);
+    margin-right: 5px;
+}
+
+.editor-box {
+    flex: 1;
+    background-color: var(--bg-panel-green);
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.editor-inner {
+    width: 100%;
+    background-color: #d8d8d8;
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+}
+
+.line-numbers {
+    width: 50px;
+    background-color: #909090;
+    color: #fdfdfd;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    user-select: none;
+}
+
+.code-content {
+    flex: 1;
+    padding: 20px 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.indent {
+    margin-left: 25px;
+}
+
+.input-box {
+    background-color: var(--white);
+    display: inline-block;
+    width: 95%;
+    padding: 2px 10px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: var(--text-dark);
+}
+
+/* ---------- แถบปุ่มด้านล่างสุด ---------- */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: var(--bg-panel-green);
+    color: var(--white);
+    border: none;
+    padding: 15px 60px;
+    border-radius: 18px;
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.btn:hover {
+    background-color: #48c038;
+    text-decoration: none;
+}
+
+.action-right {
+    display: flex;
+    gap: 20px;
+}
+
+.btn.disabled {
+    background-color: #666;
+    color: #aaa;
+    pointer-events: none;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.btn.pulse {
+    background-color: #48c038;
+    animation: pulse-green 1.5s infinite;
+    text-decoration: none;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(72, 192, 56, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(72, 192, 56, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(72, 192, 56, 0);
+    }
+}
+
+/* ---------- Popup เลือกด่าน ---------- */
+.level-popup {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    background-color: var(--bg-dark2-green);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    z-index: 100;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.level-popup.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.category-title:first-child {
+    margin-top: 0;
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.lvl-btn {
+    background-color: #2b7a18;
+    color: white;
+    text-decoration: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lvl-btn:hover {
+    background-color: #48c038;
+    transform: scale(1.05);
+}
+
+/* สีสำหรับด่านที่ผ่านแล้ว */
+.lvl-btn.completed {
+    background-color: #48c038;
+    border: 2px solid #fff;
+}
+
+/* สีสำหรับด่านปัจจุบัน */
+.lvl-btn.current {
+    background-color: #ffffff;
+    color: var(--bg-dark-green);
+    font-weight: bold;
+    pointer-events: none;
+    /* กดซ้ำไม่ได้ */
+}

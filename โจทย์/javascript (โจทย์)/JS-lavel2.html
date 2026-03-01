@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด JS - ด่านที่ 15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/css (js โจทย์)/lavel2.css">
+
+</head>
+
+<body>
+    <header>พื้นฐาน JavaScript: การดักจับ Event การคลิก</header>
+    <main class="main-container">
+
+        <div class="preview-container">
+            <div class="js-card">
+                <div class="badge">id="submit-btn"</div>
+                <!-- ปุ่มนี้จะทำงานได้ก็ต่อเมื่อพิมพ์โค้ดถูก -->
+                <button class="action-btn" id="fake-submit">คลิกฉันสิ!</button>
+                <div id="success-msg">ฟังก์ชันทำงานแล้ว 🎉</div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>เพิ่มเหตุการณ์ให้กับปุ่ม เมื่อถูก <strong style="color: #ffeb3b;">"click"</strong>
+                    ให้เรียกใช้งานฟังก์ชันชื่อ <code>sayHello</code></h2>
+                <div class="line"></div>
+                <ul class="list-items">
+                    <li>หัวใจหลักของเว็บโต้ตอบได้ คือการใช้ <code>addEventListener</code></li>
+                    <li>รูปแบบ: <code>ปุ่ม.addEventListener("ชื่อเหตุการณ์", ชื่อฟังก์ชัน);</code></li>
+                    <li><em>ลองพิมพ์โค้ดให้ถูก แล้วไปกดปุ่ม "คลิกฉันสิ!" ด้านบนดูสิ</em></li>
+                </ul>
+            </div>
+
+            <div class="editor-box">
+                <div class="editor-inner">
+                    <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+                    <div class="code-content">
+                        <div><span class="code-keyword">const</span> <span class="code-var">btn</span> =
+                            document.getElementById(<span class="code-string">"submit-btn"</span>);</div>
+                        <div style="color: #5c6370; font-style: italic;">// ดักจับการคลิกให้เรียกฟังก์ชัน sayHello</div>
+
+                        <div style="margin-top: 5px;">
+                            <input type="text" id="js-input" class="input-box" placeholder="btn..." autocomplete="off"
+                                spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <div class="action-left" style="position: relative;">
+                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">JS ด่านที่ 2 ▴</button>
+                <div class="level-popup" id="level-popup">
+
+                    <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn current">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="btn disabled" id="nextBtn">ถัดไป</a>
+            </div>
+        </div>
+
+        <script src="/javascript/js (js)/lavel-2.js"></script>
+    </main>
+</body>
+
+</html>

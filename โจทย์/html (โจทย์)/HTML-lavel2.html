@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด HTML - ด่านที่ 1</title>
+
+    <link rel="stylesheet" href="/css/css (โจทย์ html)/lavel2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        การเรียนรู้ HTML Input Types
+    </header>
+
+    <main class="main-container">
+
+        <!-- หน้าต่างพรีวิวผลลัพธ์แบบฟอร์ม -->
+        <div class="preview-container">
+            <!-- แถบสีเหลืองตรงกลาง -->
+            <div class="form-wrapper">
+                <div class="form-title">แบบฟอร์ม</div>
+
+                <div class="form-label">ชื่อ - นามสกุล</div>
+                <div class="form-input-static"></div>
+
+                <div class="form-label">เบอร์โทรศัพท์</div>
+                <div class="form-input-static"></div>
+
+                <!-- พื้นที่ที่โค้ดของผู้ใช้จะถูกดึงมาแสดงผล (Render) แบบ Real-time -->
+                <div id="user-render-area"></div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>
+                    สร้างปุ่มกดสำหรับส่งข้อมูล โดยใช้แท็ก <span class="code-highlight">&lt;input&gt;</span> ประเภทปุ่มกด
+                    และกำหนดข้อความบนปุ่มว่า <strong>"ส่งคำตอบ"</strong>
+                </h2>
+                <div class="line"></div>
+
+                <ul class="list-items">
+                    <li><code>type="text"</code> สร้างช่องกรอกข้อความทั่วไป</li>
+                    <li><code>type="password"</code> สร้างช่องกรอกรหัสผ่าน (ซ่อนตัวอักษร)</li>
+                    <li><code>type="button"</code> สร้างปุ่มกดที่สามารถคลิกได้</li>
+                    <li><code>value="..."</code> ใช้กำหนด <strong>ข้อความ</strong> ที่จะแสดงบนปุ่ม</li>
+                </ul>
+            </div>
+
+            <div class="editor-box">
+                <div class="editor-inner">
+
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7
+                    </div>
+
+                    <div class="code-content">
+                        <div>&lt;form&gt;</div>
+
+                        <div class="indent" style="margin-top: 5px; margin-bottom: 5px;">
+                            <!-- ช่องรับคำสั่ง HTML -->
+                            <input type="text" id="html-input" class="input-box"
+                                placeholder="<!-- พิมพ์โค้ดปุ่มที่นี่ -->" autocomplete="off" spellcheck="false">
+                        </div>
+
+                        <div>&lt;/form&gt;</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- แถบปุ่ม -->
+        <div class="action-bar">
+            <div class="action-left" style="position: relative;">
+                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">HTML ด่านที่ 2 ▴</button>
+
+                <!--กล่อง Popup เลือกด่าน -->
+                <div class="level-popup" id="level-popup">
+
+
+                    <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn current">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn ">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="btn disabled" id="next-btn">ถัดไป</a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/javascript/js (html)/lavel-2.js"></script>
+</body>
+
+</html>

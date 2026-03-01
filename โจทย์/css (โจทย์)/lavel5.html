@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด - ด่านที่ 5</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/css (โจทย์ css)/lavel-5.css">
+</head>
+
+<body>
+
+    <header>
+        การจัดเรียงแนวตั้งด้วยคำสั่ง align-items
+    </header>
+
+    <main class="main-container">
+        
+        <div class="pond-container" id="pond">
+            <div class="layer pad-layer">
+                <img src="/195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img"> 
+                <img src="/195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img"> 
+                <img src="/195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img">
+            </div>
+
+            <div class="layer frog-layer" id="frog-layer">
+                <img src="/image-Photoroom (3).png" alt="[Image of กบ]" class="frog-img">
+                <img src="/image-Photoroom (3).png" alt="" class="frog-img">
+                <img src="/image-Photoroom (3).png" alt="" class="frog-img">
+            </div>
+        </div>
+
+        <div class="bottom-section">
+
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>
+                    ช่วยพากบทั้งหลายไปสู่ด้านล่างของสระน้ำโดยใช้ <span class="code-highlight">align-items</span>
+                </h2>
+                <div class="line"></div>
+
+                <ul class="list-items">
+                    <li><code>flex-start</code>: เรียง items ไปไว้ด้านบนของ container</li>
+                    <li><code>flex-end</code>: เรียง items ไปไว้ด้านล่างของ container</li>
+                    <li><code>center</code>: เรียง items ไปไว้ตรงกลางในแนวตั้งของ container</li>
+                    <li><code>baseline</code>: แสดง items ที่แนวบรรทัดของ container</li>
+                    <li><code>stretch</code>: items จะถูกดึงให้พอดีกับ container</li>
+                </ul>
+            </div>
+
+            <div class="editor-box">
+                <div class="editor-inner">
+
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7
+                    </div>
+
+                    <div class="code-content">
+                        <div>#pond {</div>
+                        <div class="indent">display: flex;</div>
+
+                        <div class="indent">
+                            <input type="text" id="css-input" class="input-box" placeholder="" autocomplete="off" spellcheck="false">
+                        </div>
+
+                        <div>}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- แถบปุ่ม -->
+        <div class="action-bar">
+            <div class="action-left" style="position: relative;">
+                <!--ปุ่มสำหรับกดเปิด/ปิดเมนู -->
+                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">CSS ด่านที่ 5 ▴</button>
+
+                <!--กล่อง Popup เลือกด่าน -->
+                <div class="level-popup" id="level-popup">
+
+                  <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                        <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn current">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn ">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn">7</a>
+                    </div>
+
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="/โจทย์/css (โจทย์)/lavel6.html" class="btn disabled" id="next-btn">ถัดไป</a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/javascript/js (css)/lavel-5.js"></script>
+</body>
+
+</html>

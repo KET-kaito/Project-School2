@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฝึกเขียนโค้ด - ด่านที่ 3</title>
+
+    <link rel="stylesheet" href="/css/css (โจทย์ css)/lavel-3.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- แถบด้านบน -->
+    <header>
+        การเคลื่อนที่โดยใช้คำสั่ง justify
+    </header>
+
+    <main class="main-container">
+
+        <div class="pond-container" id="pond">
+            <!-- เลเยอร์ใบบัว (Pads) จัดแบบ space-between ไว้รอรับกบเสมอ -->
+            <div class="layer pad-layer">
+                <img src="/195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img">
+                <img src="/195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img">
+                <img src="/195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img">
+            </div>
+
+            <!-- เลเยอร์กบ (Frogs) จะถูกควบคุมผ่าน CSS ที่พิมพ์ -->
+            <div class="layer frog-layer" id="frog-layer">
+                <img src="/image-Photoroom (3).png" alt="[Image of กบ]" class="frog-img">
+                <img src="/image-Photoroom (3).png" alt="" class="frog-img">
+                <img src="/image-Photoroom (3).png" alt="" class="frog-img">
+            </div>
+        </div>
+
+        <!-- เนื้อหาด้านล่าง -->
+        <div class="bottom-section">
+
+            <!-- กล่องโจทย์ (ซ้าย) -->
+            <div class="instruction-box">
+                <h1>โจทย์</h1>
+                <h2>
+                    ช่วยพากบไปที่ใบบัวโดยใช้ <span class="code-highlight">justify-content</span>
+                </h2>
+                <!-- เส้นคั่นสีขาว -->
+                <div class="line"></div>
+
+                <ul class="list-items">
+                    <li><code>flex-start</code>: เรียง items ไปทางซ้าย (ค่าเริ่มต้น)</li>
+                    <li><code>flex-end</code>: เรียง items ไปทางขวา</li>
+                    <li><code>center</code>: เรียง items ไปตรงกลาง</li>
+                    <li><code>space-between</code>: เว้นระยะห่างระหว่าง items เท่ากัน</li>
+                    <li><code>space-around</code>: เว้นระยะห่างรอบๆ items เท่ากัน</li>
+                </ul>
+            </div>
+
+            <!-- กล่องเขียนโค้ด (ขวา) -->
+            <div class="editor-box">
+                <div class="editor-inner">
+
+                    <!-- ฟั่งตัวเลข -->
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7
+                    </div>
+
+                    <div class="code-content">
+                        <div>#pond {</div>
+                        <div class="indent">display: flex;</div>
+
+                        <!-- เปลี่ยนเป็น input เพื่อให้ผู้ใช้พิมพ์ได้ -->
+                        <div class="indent">
+                            <input type="text" id="css-input" class="input-box" placeholder="" autocomplete="off"
+                                spellcheck="false">
+                        </div>
+
+                        <div>}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- แถบปุ่ม -->
+        <div class="action-bar">
+            <div class="action-left" style="position: relative;">
+                <!-- ปุ่มสำหรับกดเปิด/ปิดเมนู -->
+                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">CSS ด่านที่ 3 ▴</button>
+
+                <!-- กล่อง Popup เลือกด่าน -->
+                <div class="level-popup" id="level-popup">
+<!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="/โจทย์/html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
+                    </div>
+
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/css (โจทย์)/lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel3.html" class="lvl-btn current">3</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel4.html" class="lvl-btn ">4</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel5.html" class="lvl-btn ">5</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel6.html" class="lvl-btn ">6</a>
+                        <a href="/โจทย์/css (โจทย์)/lavel7.html" class="lvl-btn">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel1.html" class="lvl-btn">1</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel2.html" class="lvl-btn">2</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="/โจทย์/javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <!-- ใส่ class disabled ไว้ตั้งแต่เริ่มต้น -->
+                <a href="/โจทย์/css (โจทย์)/lavel4.html" class="btn disabled" id="next-btn">ถัดไป</a>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="/javascript/js (css)/lavel-3.js"></script>
+</body>
+
+</html>
