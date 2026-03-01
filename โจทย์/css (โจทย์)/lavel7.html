@@ -35,7 +35,7 @@
             <div class="instruction-box">
                 <h1>โจทย์</h1>
                 <h2>
-                    ช่วยพาเจ้ากบไปยังกลางสระ โดยใช้คำสั่งทั้ง<span class="code-highlight">justify-content</span>
+                    ช่วยพาเจ้ากบไปยังกลางสระ โดยใช้คำสั่งทั้ง <span class="code-highlight">justify-content</span>
                 </h2>
 
                 <h2>
@@ -45,9 +45,11 @@
 
                 <ul class="list-items">
                     <li><strong>justify-content (แนวนอน):</strong> <code>flex-start</code>, <code>flex-end</code>,
-                        <code>center</code>, <code>space-between</code>, <code>space-around</code></li>
+                        <code>center</code>, <code>space-between</code>, <code>space-around</code>
+                    </li>
                     <li style="margin-top: 10px;"><strong>align-items (แนวตั้ง):</strong> <code>flex-start</code>,
-                        <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code></li>
+                        <code>flex-end</code>, <code>center</code>, <code>baseline</code>, <code>stretch</code>
+                    </li>
                 </ul>
             </div>
 
@@ -80,54 +82,51 @@
             <div class="action-left" style="position: relative;">
                 <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">CSS ด่านที่ 7 ▴</button>
 
-                <!--กล่อง Popup เลือกด่าน -->
+                <!--กล่อง Popup เลือกด่าน (ลบ div ที่ซ้อนทับกันออก) -->
                 <div class="level-popup" id="level-popup">
 
-                    <!-- กล่อง Popup เลือกด่าน -->
-                    <div class="level-popup" id="level-popup">
-
-                        <!-- หมวด HTML -->
-                        <div class="category-title">HTML (7 ด่าน)</div>
-                        <div class="level-grid">
-                            <a href="../../index.html" class="lvl-btn completed">1</a>
-                            <a href="../html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
-                            <a href="../html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
-                            <a href="../html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
-                            <a href="../html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
-                            <a href="../html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
-                            <a href="../html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
-                        </div>
-
-                        <!-- หมวด CSS -->
-                        <div class="category-title">CSS (7 ด่าน)</div>
-                        <div class="level-grid">
-                            <a href="lavel1.html" class="lvl-btn current">1</a>
-                            <a href="lavel2.html" class="lvl-btn">2</a>
-                            <a href="lavel3.html" class="lvl-btn">3</a>
-                            <a href="lavel4.html" class="lvl-btn">4</a>
-                            <a href="lavel5.html" class="lvl-btn">5</a>
-                            <a href="lavel6.html" class="lvl-btn">6</a>
-                            <a href="lavel7.html" class="lvl-btn">7</a>
-                        </div>
-
-                        <!-- หมวด JS -->
-                        <div class="category-title">JS (5 ด่าน)</div>
-                        <div class="level-grid">
-                            <a href="../javascript (โจทย์)/JS-lavel1.html" class="lvl-btn">1</a>
-                            <a href="../javascript (โจทย์)/JS-lavel2.html" class="lvl-btn">2</a>
-                            <a href="../javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
-                            <a href="../javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
-                            <a href="../javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
-                        </div>
-
+                    <!-- หมวด HTML -->
+                    <div class="category-title">HTML (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="../../index.html" class="lvl-btn completed">1</a>
+                        <a href="../html (โจทย์)/HTML-lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="../html (โจทย์)/HTML-lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="../html (โจทย์)/HTML-lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="../html (โจทย์)/HTML-lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="../html (โจทย์)/HTML-lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="../html (โจทย์)/HTML-lavel7.html" class="lvl-btn completed">7</a>
                     </div>
-                </div>
 
-                <div class="action-right">
-                    <button class="btn" onclick="showAnswer()">เฉลย</button>
-                    <a href="../javascript (โจทย์)/JS-lavel1.html" class="btn disabled" id="next-btn">ถัดไป</a>
+                    <!-- หมวด CSS -->
+                    <div class="category-title">CSS (7 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="lavel2.html" class="lvl-btn completed">2</a>
+                        <a href="lavel3.html" class="lvl-btn completed">3</a>
+                        <a href="lavel4.html" class="lvl-btn completed">4</a>
+                        <a href="lavel5.html" class="lvl-btn completed">5</a>
+                        <a href="lavel6.html" class="lvl-btn completed">6</a>
+                        <a href="lavel7.html" class="lvl-btn current">7</a>
+                    </div>
+
+                    <!-- หมวด JS -->
+                    <div class="category-title">JS (5 ด่าน)</div>
+                    <div class="level-grid">
+                        <a href="../javascript (โจทย์)/JS-lavel1.html" class="lvl-btn">1</a>
+                        <a href="../javascript (โจทย์)/JS-lavel2.html" class="lvl-btn">2</a>
+                        <a href="../javascript (โจทย์)/JS-lavel3.html" class="lvl-btn">3</a>
+                        <a href="../javascript (โจทย์)/JS-lavel4.html" class="lvl-btn">4</a>
+                        <a href="../javascript (โจทย์)/JS-lavel5.html" class="lvl-btn">5</a>
+                    </div>
+
                 </div>
+            </div> <!-- ✅ ปิด action-left -->
+
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="../javascript (โจทย์)/JS-lavel1.html" class="btn disabled" id="next-btn">ถัดไป</a>
             </div>
+        </div>
 
     </main>
 

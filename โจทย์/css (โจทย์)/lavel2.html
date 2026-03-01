@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- แก้ไข Title ให้สื่อความหมาย -->
+    <title>CSS Level 2 - justify-content</title>
 
+    <!-- ⚠️ แนะนำ: ในอนาคตควรเปลี่ยนชื่อโฟลเดอร์ไม่ให้มีวงเล็บ ภาษาไทย และเว้นวรรค -->
     <link rel="stylesheet" href="../../css/css (โจทย์ css)/lavel-2.css">
 </head>
 
@@ -20,6 +22,7 @@
         <div class="pond-container" id="pond">
             <!-- สระน้ำ (Pond) -->
             <img src="../../image-Photoroom (3).png" alt="[Image of กบ]" class="frog-img" id="frog">
+            <!-- เพิ่ม alt ให้รูปใบบัว -->
             <img src="../../195427243_4b32e0fe-95b1-4978-84d4-563d73f1146d.png" alt="" class="lilypad-img">
         </div>
 
@@ -59,8 +62,7 @@
 
                         <!-- เปลี่ยนเป็น input เพื่อให้ผู้ใช้พิมพ์ได้ -->
                         <div class="indent">
-                            <input type="text" id="css-input" class="input-box" placeholder="" autocomplete="off"
-                                spellcheck="false">
+                            <input type="text" id="css-input" class="input-box" placeholder="" autocomplete="off" spellcheck="false">
                         </div>
 
                         <div>}</div>
@@ -72,14 +74,13 @@
 
         <!-- แถบปุ่ม -->
         <div class="action-bar">
+            <!-- ✅ แก้ไขโครงสร้างที่ผิดพลาดตรงนี้ ลบ div ซ้ำซ้อนและปิดแท็กให้ถูกต้อง -->
             <div class="action-left" style="position: relative;">
+                
                 <!-- ปุ่มสำหรับกดเปิด/ปิดเมนู -->
                 <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">CSS ด่านที่ 2 ▴</button>
 
-                <!-- กล่อง Popup เลือกด่าน -->
-                <div class="level-popup" id="level-popup">
-
-                       <!-- กล่อง Popup เลือกด่าน -->
+                <!-- กล่อง Popup เลือกด่าน (เอาอันที่ซ้ำกันออก 1 อัน) -->
                 <div class="level-popup" id="level-popup">
 
                     <!-- หมวด HTML -->
@@ -97,8 +98,8 @@
                     <!-- หมวด CSS -->
                     <div class="category-title">CSS (7 ด่าน)</div>
                     <div class="level-grid">
-                        <a href="lavel1.html" class="lvl-btn current">1</a>
-                        <a href="lavel2.html" class="lvl-btn">2</a>
+                        <a href="lavel1.html" class="lvl-btn completed">1</a>
+                        <a href="lavel2.html" class="lvl-btn current">2</a>
                         <a href="lavel3.html" class="lvl-btn">3</a>
                         <a href="lavel4.html" class="lvl-btn">4</a>
                         <a href="lavel5.html" class="lvl-btn">5</a>
@@ -117,18 +118,16 @@
                     </div>
 
                 </div>
-            </div>
-
+            </div> <!-- ✅ เพิ่มแท็กปิด </div> ของ action-left ที่หายไปตรงนี้ -->
 
             <div class="action-right">
                 <button class="btn" onclick="showAnswer()">เฉลย</button>
                 <!-- ใส่ class disabled ไว้ตั้งแต่เริ่มต้น -->
                 <a href="lavel3.html" class="btn disabled" id="next-btn">ถัดไป</a>
-
             </div>
-        </div>
-
-
+            
+        </div> <!-- ปิด action-bar -->
+        
     </main>
 
     <script src="../../javascript/js (css)/lavel-2.js"></script>

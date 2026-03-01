@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกมฝึกเขียนโค้ด JS - ด่านที่ 15</title>
+    <!-- แก้ไขเป็นด่านที่ 5 -->
+    <title>เกมฝึกเขียนโค้ด JS - ด่านที่ 5</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/css (js โจทย์)/lavel5.css">
 </head>
@@ -55,9 +56,12 @@
             </div>
         </div>
 
+        <!-- แถบปุ่ม -->
         <div class="action-bar">
+            <!-- ซ้าย: ปุ่มเมนูและ Popup -->
             <div class="action-left" style="position: relative;">
-                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">JS ด่านที่ 2 ▴</button>
+                <!-- แก้ไขข้อความปุ่มเป็น ด่านที่ 5 -->
+                <button class="btn" id="toggle-menu-btn" onclick="toggleLevelMenu()">JS ด่านที่ 5 ▴</button>
                 <div class="level-popup" id="level-popup">
 
                     <!-- หมวด HTML -->
@@ -95,11 +99,15 @@
                     </div>
 
                 </div>
-                <div class="action-right">
-                    <button class="btn" onclick="showAnswer()">เฉลย</button>
-                    <a href="#" class="btn disabled" id="next-btn">ถัดไป</a>
-                </div>
+            </div> <!-- ✅ ปิด action-left เพื่อแยกจาก action-right -->
+
+            <!-- ขวา: ปุ่มเฉลยและปุ่มถัดไป -->
+            <div class="action-right">
+                <button class="btn" onclick="showAnswer()">เฉลย</button>
+                <a href="#" class="btn disabled" id="next-btn">ถัดไป</a>
             </div>
+            
+        </div> <!-- ✅ ปิด action-bar อย่างถูกต้อง -->
 
     </main>
 
