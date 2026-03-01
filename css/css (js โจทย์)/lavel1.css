@@ -44,7 +44,7 @@
  }
 
  .preview-container {
-     background-image: url('/Screenshot\ 2026-02-26\ 212857.png');
+     background-image: url('../../Screenshot\ 2026-02-26\ 212857.png');
      flex: 1;
      background-color: #2b2b2b;
      border: 12px solid var(--white);
