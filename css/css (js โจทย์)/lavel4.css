@@ -2,6 +2,7 @@
      --bg-dark-green: #0a400a;
      --bg-panel-green: #3ea924;
      --bg-dark2-green: #42ac18;
+     --form-bg-blue: #23518c;
      --white: #ffffff;
      --text-dark: #333333;
  }
@@ -45,7 +46,7 @@
  /* ----- Preview Container (พื้นหลังสีเทาเข้มแบบด่าน 14) ----- */
  .preview-container {
      flex: 1;
-     background-color: #2b2b2b;
+     background-color: var(--form-bg-blue);
      border: 12px solid var(--white);
      border-radius: 40px;
      position: relative;
